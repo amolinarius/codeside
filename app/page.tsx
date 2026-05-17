@@ -3,11 +3,12 @@ import { getMetadataProperty, log, LogType } from "./actions";
 import LoginModal from "./components/LoginModal";
 import BottomNavbar from "./components/BottomNavbar";
 import TopNavbar from "./components/TopNavbar";
-import { currentUser } from "@clerk/nextjs/server";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import TabContent from "./components/pages/TabContent";
 
 export default async function Page() {
 	const user = await currentUser();
+	// console.log(await auth());
 	if (!user) {return <LoginModal open={true}/>}
 
 	const streak: number = await getMetadataProperty(user, 'public', 'streak', 0);

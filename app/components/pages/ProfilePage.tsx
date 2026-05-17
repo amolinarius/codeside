@@ -12,7 +12,7 @@ export default function ProfilePage({ username: _username }: { username?: string
     const joinDate = new Date(user.createdAt);
 
     return (
-        <div className="flex justify-center max-w-xl mx-auto border py-10">
+        <div className="flex justify-center">
             <div className="flex flex-row not-sm:scale-85 justify-center items-center h-fit origin-top">
                 <Image src={user.imageUrl} alt="Profile picture" width={64} height={64} className="rounded-full w-16 h-16" />
                 <div className="ml-5 h-fit">

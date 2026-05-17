@@ -1,0 +1,62 @@
+{
+    "title": "Introduction",
+    "id": 0,
+    "content": [
+        {
+            "id": 0,
+            "type": "lesson",
+            "content": [
+                "## Structure",
+                "Les variables sont comme des boîtes permettant de stocker des informations afin de les utiliser plus tard.  ",
+                "Elles peuvent être définies avec l'**opérateur d'affectation** `=`.",
+                "  ",
+                "Exemple :",
+                "```python",
+                "x = 5",
+                "x > 2 # => True",
+                "```"
+            ]
+        },
+        {
+            "id": 1,
+            "type": "lesson",
+            "content": [
+                "## Types",
+                "Il y existe différent types de **variables**. Voici les principaux :",
+                "- Les nombres entiers ou _integers_ (`int`). Exemple : `5`",
+                "- Les nombres décimaux ou flottants (`float`). Exemple : `2.5`",
+                "- Les chaînes de charactères ou _strings_ (`str`). Exemple : `\"bonjour\"`",
+                "- Les booléens = vrai ou faux (`bool`). Exemple : `True`"
+            ]
+        },
+        {
+            "id": 2,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quel est le nombre flottant (`float`) parmi ces options ?"
+            ],
+            "options": ["`\"hello world\"`", "`140`", "`10.2`"],
+            "answer": 2
+        },
+        {
+            "id": 3,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quel est la chaîne de charactères (`str`)  parmi ces options ?"
+            ],
+            "options": ["`\"hello world\"`", "`140`", "`10.2`"],
+            "answer": 0
+        },
+        {
+            "id": 4,
+            "type": "lesson",
+            "content": [
+                "## La suite de cette leçon est en cours de conception",
+                "  ",
+                "Cliquez sur **Suivant** pour terminer cette leçon et y revenir plus tard"
+            ]
+        }
+    ]
+}

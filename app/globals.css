@@ -10,6 +10,12 @@
 		75% {transform: rotate(10deg)}
 		100% {transform: rotate(0deg)}
 	}
+	--animate-scale: scale 1s linear;
+	@keyframes scale {
+		0% {transform: scale(100%)}
+		50% {transform: scale(120%)}
+		100% {transform: scale(100%)}
+	}
 }
 @utility text-stroke-* {
 	text-shadow: -1px -1px var(--text-stroke-drop, 0) --value(--color-*), 1px -1px var(--text-stroke-drop, 0) --value(--color-*), -1px 1px var(--text-stroke-drop, 0) --value(--color-*), 1px 1px var(--text-stroke-drop, 0) --value(--color-*);
@@ -20,3 +26,12 @@
 @utility flip-vertical {transform: scale(-1, 1)}
 @utility flip-horizontal {transform: scale(1, -1)}
 @utility font-dosis {font-family: var(--font-dosis)}
+
+@layer base {
+	.markdown {
+		h1 {@apply font-bold text-2xl}
+		h2 {@apply font-semibold text-xl}
+		h3 {@apply text-lg}
+		ul {@apply list-disc ml-5}
+	}
+}
