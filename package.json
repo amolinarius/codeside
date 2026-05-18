@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "bun run --bun next dev",
+		"dev:https": "bun run --bun next dev --experimental-https",
 		"build": "bun run --bun next build",
 		"start": "next start",
 		"lint": "eslint"
@@ -17,8 +18,7 @@
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
 		"react-markdown": "^10.1.0",
-		"react-syntax-highlighter": "^16.1.1",
-		"vercel": "^54.1.0"
+		"react-syntax-highlighter": "^16.1.1"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4",

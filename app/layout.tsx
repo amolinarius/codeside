@@ -10,7 +10,10 @@ const dosis = Dosis({ variable: "--font-dosis", style: "normal", subsets: ["lati
 export const metadata: Metadata = {
 	title: "Codeside",
 	description: "A Progressive Web App to learn Python",
-	icons: ["logo.png"]
+	icons: {
+		icon: "/favicon.ico",
+		apple: "/apple-touch-icon.png"
+	}
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
