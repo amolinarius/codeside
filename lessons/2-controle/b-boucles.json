@@ -1,0 +1,125 @@
+{
+    "title": "Boucles",
+    "id": 1,
+    "content": [
+        {
+            "id": 0,
+            "type": "lesson",
+            "content": [
+                "## Définitions",
+                "Les boucles permettent de répéter plusieurs fois le même code.  ",
+                "Il existe deux types principaux de boucles : les boucles `for` et les boucles `while`.  ",
+                "Les boucles `for` sont utilisées pour itérer sur une séquence (liste, chaîne, etc.).  ",
+                "Les boucles `while` répètent le code tant qu'une condition est vraie."
+            ]
+        },
+        {
+            "id": 1,
+            "type": "lesson",
+            "content": [
+                "## Boucles `for`",
+                "Une boucle `for` parcourt chaque élément d'une séquence.  ",
+                "Elle est déclarée avec le **mot-clé** `for`, suivi d'une variable, du **mot-clé** `in`, d'une **séquence**, et d'un double point `:`  ",
+                "Son contenu est ensuite **indenté**.  ",
+                "La séquence la plus courante est la fonction `range(i, j)` qui répète de l'itération `i` incluse à `j` non-incluse.  ",
+                "## Exemple",
+                "```python",
+                "a = 0",
+                "for i in range(5):",
+                "\ta = a + i",
+                "```",
+                "Cet exemple calcule la somme des nombres de 0 à 4.  ",
+                "**Note :** `range(5)` est équivalent à `range(0, 5)`"
+            ]
+        },
+        {
+            "id": 2,
+            "type": "lesson",
+            "content": [
+                "## Boucles `while`",
+                "Une boucle `while` répète le code tant qu'une condition est vraie.  ",
+                "Elle est déclarée avec le **mot-clé** `while`, suivi d'une condition, et d'un double point `:`  ",
+                "Son contenu est ensuite **indenté**.  ",
+                "## Exemple",
+                "```python",
+                "x = 0",
+                "y = 0",
+                "while x < 5:",
+                "\ty = y + x",
+                "\tx = x + 1",
+                "```",
+                "Cet exemple ajoute les nombres de 0 à 4 à `y`, en **incrémentant** (= augmenter de 1) `x` à chaque itération."
+            ]
+        },
+        {
+            "id": 3,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quelle boucle utilise le **mot-clé** `in` ?"
+            ],
+            "options": [
+                "La boucle `for`",
+                "La boucle `while`",
+                "Les deux"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 4,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quelle structure est correcte pour une boucle `for` ?"
+            ],
+            "options": [
+                "```python\nfor i in range(10):\n\tprint(i)\n```",
+                "```python\nfor i in range(10)\n\tprint(i)\n```",
+                "```python\nfor i in range(10):\nprint(i)\n```"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 5,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quelle structure est correcte pour une boucle `while` ?"
+            ],
+            "options": [
+                "```python\nwhile x > 0:\n\tx = x - 1\n```",
+                "```python\nwhile x > 0\n\tx = x - 1\n```",
+                "```python\nwhile (x > 0):\nx = x - 1\n```"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 6,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quel code affiche les nombres de 1 à 5 avec une boucle `for` ?"
+            ],
+            "options": [
+                "`for i in range(1, 6):\n\tprint(i)`",
+                "`for i in range(5):\n\tprint(i)`",
+                "`for i in range(0, 5):\n\tprint(i)`"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 7,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quel code affiche les nombres de 10 à 0 avec une boucle `while` ?"
+            ],
+            "options": [
+                "```python\nx = 10\nwhile x >= 0:\n\tprint(x)\n\tx = x - 1\n```",
+                "```python\nx = 10\nwhile x > 0:\n\tprint(x)\n\tx = x - 1\n```",
+                "```python\nx = 0\nwhile x <= 10:\n\tprint(x)\n\tx = x + 1\n```"
+            ],
+            "answer": 0
+        }
+    ]
+}

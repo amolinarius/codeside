@@ -19,7 +19,7 @@ export default function TopNavbar({ streak, total_xp }: TopNavbarProps) {
     return (
         <nav className="navbar bg-base-300 not-sm:h-12 min-h-12 fixed top-0 left-0 right-0">
             <div className="navbar-start">
-                <Image src="/logo.png" alt="Logo" width={48} height={48} className="not-sm:hidden" loading="eager"/>
+                <Image src="/logo-192x192.png" alt="Logo" width={48} height={48} className="not-sm:hidden" loading="eager"/>
             </div>
 
             {/* Mobile layout */}

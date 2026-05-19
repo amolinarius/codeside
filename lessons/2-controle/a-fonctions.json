@@ -1,0 +1,128 @@
+{
+    "title": "Fonctions",
+    "id": 0,
+    "content": [
+        {
+            "id": 0,
+            "type": "lesson",
+            "content": [
+                "## Définitions",
+                "Les fonctions peuvent être apparentées des machines capables de faire des calculs  ",
+                "Elles nécéssitent parfois des informations (**arguments**) séparés par des virgules et peuvent renvoyer une valeur à l'aide du **mot-clé** `return`  ",
+                "Une fonction est déclarée avec le **mot-clé** `def`, suivi du nom de la fonction, de ses arguments entre parenthèses et d'un double point `:`  ",
+                "Son contenu est ensuite **indenté**, c'est-à-dire que chaque lignes commence par une tabulation ou des espaces (souvent 2 ou 4).",
+                "  ",
+                "## Exemple de structure",
+                "```python",
+                "def fonction(arguments):",
+                "\treturn arguments",
+                "```"
+            ]
+        },
+        {
+            "id": 1,
+            "type": "lesson",
+            "content": [
+                "## Return",
+                "Le **mot-clé** `return` permet de renvoyer une valeur.  ",
+                "Par exemple, la fonction suivante prend un nombre `x` en argument et renvoie son double.  ",
+                "```python",
+                "def double(x):",
+                "\treturn x * 2",
+                "```"
+            ]
+        },
+        {
+            "id": 2,
+            "type": "lesson",
+            "content": [
+                "## Appel de fonction",
+                "Pour appeler une fonction, on écrit son nom, suivi des possibles arguments entre parenthèses.  ",
+                "Les parenthèses sont nécéssaires même si il n'y a pas d'arguments.  ",
+                "## Exemple",
+                "Cette fonction calcule le volume d'un cercle à partir de son rayon.",
+                "```python",
+                "def sphere(rayon):",
+                "\tpi = 3.14",
+                "\tV = 4/3 * pi * (rayon ** 3)",
+                "\treturn V",
+                "```",
+                "Pour l'appeler et avoir le volume d'une sphère de rayon 50, on écrit dans la console :",
+                "```python",
+                "sphere(50)",
+                "```"
+            ]
+        },
+        {
+            "id": 3,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quelle structure est correcte parmi les exemples suivants ?"
+            ],
+            "options": [
+                "```python\ndef carre(x):\n\treturn x ** 2\n```",
+                "```python\ndef carre(x)\n\treturn x ** 2\n```",
+                "```python\ndef carre(x):\nreturn x ** 2\n```"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 4,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quel **mot-clé** permet de définir une fonction ?"
+            ],
+            "options": ["`def`", "`return`", "`print`"],
+            "answer": 0
+        },
+        {
+            "id": 5,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quelle fonction est fausse dans les exemples suivants ?"
+            ],
+            "options": [
+                "```python\ndef cube(longueur largeur hauteur):\n\treturn longueur * largeur * hauteur\n```",
+                "```python\ndef cube(longueur, largeur, hauteur):\n\treturn longueur * largeur * hauteur\n```",
+                "```python\ndef cube(longueur, largeur, hauteur):\n\tV = longueur * largeur * hauteur\n\treturn V\n```"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 6,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quelle fonction est correcte dans les exemples suivants ?"
+            ],
+            "options": [
+                "```python\ndef cube(longueur,largeur,hauteur):\n\treturn longueur * largeur * hauteur\n```",
+                "```python\ndef cube(longueur, largeur, hauteur)\n\treturn longueur * largeur * hauteur\n```",
+                "```python\ndef cube(longueur, largeur, hauteur):\n\tV = longueur * largeur * hauteur\nreturn V\n```"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 7,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "On souhaite calculer le volume d'une pyramide à l'aide de la fonction suivante.  ",
+                "Que doit-on écrire dans la console ?",
+                "```python",
+                "def pyramide(base, hauteur):",
+                "\treturn 1/3 * base * hauteur",
+                "```"
+            ],
+            "options": [
+                "`pyramide(50, 60)`",
+                "`pyramide(50 60)`",
+                "`pyramide()`"
+            ],
+            "answer": 0
+        }
+    ]
+}

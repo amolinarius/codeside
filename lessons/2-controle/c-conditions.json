@@ -1,0 +1,128 @@
+{
+    "title": "Conditions",
+    "id": 2,
+    "content": [
+        {
+            "id": 0,
+            "type": "lesson",
+            "content": [
+                "## Définitions",
+                "Les conditions permettent d'exécuter du code seulement si une certaine condition est remplie.  ",
+                "Les instructions conditionnelles utilisent les **mots-clés** `if`, `else`, et comparent des valeurs avec des **opérateurs de comparaison**.  ",
+                "Les **opérateurs de comparaison** courants sont :  ",
+                "- &Eacute;gal `==` (à ne pas confondre avec l'opérateur d'affectation `=`)",
+                "- Différent `!=`",
+                "- Supérieur `>`",
+                "- Inférieur `<`",
+                "- Supérieur ou égal `>=`",
+                "- Inférieur ou égal `<=`"
+            ]
+        },
+        {
+            "id": 1,
+            "type": "lesson",
+            "content": [
+                "## Instruction `if`",
+                "Une instruction `if` (si) exécute du code si une condition est vraie.  ",
+                "Elle est déclarée avec le **mot-clé** `if`, suivi d'une condition, et d'un double point `:`  ",
+                "Son contenu est ensuite **indenté**.  ",
+                "## Exemple",
+                "```python",
+                "age = 18",
+                "if age >= 18:",
+                "\tprint(\"Vous êtes majeur\")",
+                "```",
+                "Cet exemple affiche un message seulement si l'âge est supérieur ou égal à 18."
+            ]
+        },
+        {
+            "id": 2,
+            "type": "lesson",
+            "content": [
+                "## Instruction `else`",
+                "Une instruction `else` (sinon) exécute du code si la condition du `if` est fausse.  ",
+                "Elle est déclarée avec le **mot-clé** `else`, suivi d'un double point `:`  ",
+                "Son contenu est ensuite **indenté**.  ",
+                "## Exemple",
+                "```python",
+                "age = 15",
+                "if age >= 18:",
+                "\tprint(\"Vous êtes majeur\")",
+                "else:",
+                "\tprint(\"Vous êtes mineur\")",
+                "```",
+                "Cet exemple affiche un message différent selon que l'âge est supérieur ou inférieur à 18."
+            ]
+        },
+        {
+            "id": 3,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quel opérateur de comparaison signifie « égal » ?"
+            ],
+            "options": [
+                "`=`",
+                "`==`",
+                "`!=`"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 4,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quelle structure est correcte pour une instruction `if` ?"
+            ],
+            "options": [
+                "```python\nif x > 5:\n\tprint(x)\n```",
+                "```python\nif x > 5\n\tprint(x)\n```",
+                "```python\nif x > 5:\nprint(x)\n```"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 5,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quelle structure est correcte pour une instruction `if/else` ?"
+            ],
+            "options": [
+                "```python\nif x > 5:\n\tprint(\"grand\")\nelse:\n\tprint(\"petit\")\n```",
+                "```python\nif x > 5\n\tprint(\"grand\")\nelse\n\tprint(\"petit\")\n```",
+                "```python\nif x > 5:\n\tprint(\"grand\")\nelse\nprint(\"petit\")\n```"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 6,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quel code affiche \"positif\" si `x` est strictement supérieur à 0 ?"
+            ],
+            "options": [
+                "```python\nif x > 0:\n\tprint(\"positif\")\n```",
+                "```python\nif x >= 0:\n\tprint(\"positif\")\n```",
+                "```python\nif x < 0:\n\tprint(\"positif\")\n```"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 7,
+            "type": "choose",
+            "content": [
+                "## Séléctionner la bonne réponse",
+                "Quel opérateur de comparaison signifie « différent » ?"
+            ],
+            "options": [
+                "`=`",
+                "`==`",
+                "`!=`"
+            ],
+            "answer": 2
+        }
+    ]
+}

@@ -8,7 +8,8 @@
             "content": [
                 "## Structure",
                 "Les variables sont comme des boîtes permettant de stocker des informations afin de les utiliser plus tard.  ",
-                "Elles peuvent être définies avec l'**opérateur d'affectation** `=`.",
+                "Elles peuvent être définies avec l'**opérateur d'affectation** `=`  ",
+                "Elles ne peuvent pas commencer par un nombre et ne peuvent pas contenir un accent",
                 "  ",
                 "Exemple :",
                 "```python",
@@ -48,15 +49,6 @@
             ],
             "options": ["`\"hello world\"`", "`140`", "`10.2`"],
             "answer": 0
-        },
-        {
-            "id": 4,
-            "type": "lesson",
-            "content": [
-                "## La suite de cette leçon est en cours de conception",
-                "  ",
-                "Cliquez sur **Suivant** pour terminer cette leçon et y revenir plus tard"
-            ]
         }
     ]
 }

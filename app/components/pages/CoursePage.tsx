@@ -1,4 +1,6 @@
 'use client';
+import { getMetadataProperty, incrementMetadataProperty, reloadPage, setMetadataProperty } from "@/app/actions";
+import { useUser } from "@clerk/nextjs";
 import { CircleCheck, CircleX, PartyPopper, Sparkles, Zap } from "lucide-react";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import Markdown, { Components } from "react-markdown";
@@ -29,6 +31,9 @@ export default function CoursePage({ course, setCourse }: { course: Course, setC
     const [feedback, setFeedback] = useState<{ show: boolean, right: boolean }>({ show: false, right: false });
     const [selectedOption, setSelectedOption] = useState<string|undefined>();
     const [stats, setStats] = useState<CourseStats>({ earnedXp: 0, successRate: 0, completedExercises: 0, startingTime: Date.now() });
+    const _user = useUser();
+    if (!_user.isLoaded || !_user.isSignedIn) return <div>Not authenticated</div>;
+    const { user } = _user;
     
     const shuffleArray = (arr: any[]) => arr.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => value);
     const getRandomItem = (arr: any[]) => arr[arr.length * Math.random() | 0];
@@ -36,9 +41,18 @@ export default function CoursePage({ course, setCourse }: { course: Course, setC
         if (lesson && lesson.type == "choose") setShuffledOptions(shuffleArray(lesson!.options));
     }, [lesson]);
 
-    const handleNextClick = () => {
+    const handleNextClick = async () => {
         if (lesson == undefined) {
-            //TODO Update user metadata (xp, streak) + show a "streak extended" component
+            incrementMetadataProperty(user.id, "public", "total_xp", 0, stats.earnedXp);
+            const lastLesson = new Date(new Date(await getMetadataProperty(user.id, "public", "last_lesson", 0)).toDateString()); //? Only keep day/month/year
+            const now = new Date(new Date().toDateString());
+            console.log(lastLesson, now, lastLesson.getTime(), now.getTime(), now.getTime() - lastLesson.getTime() >= 864e5);
+            if (now.getTime() - lastLesson.getTime() >= 864e5) { //? If last lesson was at least the day before
+                incrementMetadataProperty(user.id, "public", "streak", 0, 1);
+                //TODO Show a "streak extended" component
+            }
+            await setMetadataProperty(user.id, "public", "last_lesson", now);
+            await reloadPage();
             setCourse(undefined);
             return;
         }
@@ -52,7 +66,7 @@ export default function CoursePage({ course, setCourse }: { course: Course, setC
                 ...stats,
                 earnedXp: stats.earnedXp + (isRight ? 5 : 0),
                 completedExercises: stats.completedExercises + 1,
-                successRate: (stats.successRate + (isRight?1:0)) * Math.max(stats.completedExercises, 1) / (stats.completedExercises + 1)
+                successRate: (stats.successRate * stats.completedExercises + (isRight?1:0)) / (stats.completedExercises + 1)
             });
         }
         setFeedback({ show: false, right: false });
@@ -65,7 +79,7 @@ export default function CoursePage({ course, setCourse }: { course: Course, setC
             case "choose": return (
                 <div className="flex flex-col gap-2 mt-8">
                     {shuffledOptions.map(option => (
-                        <button className={"btn markdown"+(selectedOption==option ? " bg-blue-100 border-blue-400" : "")} key={option} onClick={() => {if (!feedback.show) setSelectedOption(option);}}>
+                        <button className={"btn markdown h-auto min-h-10"+(selectedOption==option ? " bg-blue-100 border-blue-400" : "")} key={option} onClick={() => {if (!feedback.show) setSelectedOption(option);}}>
                             <Markdown components={markdownComponents}>{option}</Markdown>
                         </button>
                     ))}
@@ -121,7 +135,7 @@ export default function CoursePage({ course, setCourse }: { course: Course, setC
                         <div className={(feedback.right ? "text-green-600" : "text-red-600")+" text-2xl *:inline"}>
                             {feedback.right ? getRandomItem([<Sparkles/>, <PartyPopper/>, <CircleCheck/>]) : <CircleX/>} {getCompletionMessage()}
                         </div>
-                        <div className="badge animate-scale"><Zap width={16}/> +5 XP</div>
+                        {feedback.right && <div className="badge animate-scale"><Zap width={16}/> +5 XP</div>}
                     </div>
                 )
             }
